@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 16 11:02:37 EDT 2018</td>
+<td>Started on:</td><td>Wed May 16 11:18:27 EDT 2018</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27200 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12413 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,16 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='LocationTests.LocationTestSuite.invalidBuildingTest()'><b>invalidBuildingTest</b><br>Test class: LocationTests.LocationTestSuite</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;md-checkbox md-no-ink=&quot;&quot; ng-checked=&quot;lCtrl.exists(location)&quot; ng-click=&quot;lCtrl.toggle(location)&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Toggle  pizza town, NJ&quot; tabindex=&quot;0&quot; type=&quot;checkbox&quot; role=&quot;checkbox&quot; aria-hidden=&quot;false&quot; class=&quot;md-checked&quot; aria-checked=&quot;true&quot; checked=&quot;checked&quot;&gt;...&lt;/md-checkbox&gt; is not clickable at point (976, 267). Other element would receive the click: &lt;div class=&quot;md-dialog-container ng-scope&quot; tabindex=&quot;-1&quot; style=&quot;top: 0px; height: 670px;&quot;&gt;...&lt;/div&gt;
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
 System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
+Session ID: ec04b3286bef8d82f12aee44c056ec58
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -126,16 +127,17 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1821010113", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1821010113'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;md-checkbox md-no-ink=&quot;&quot; ng-checked=&quot;lCtrl.exists(location)&quot; ng-click=&quot;lCtrl.toggle(location)&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Toggle  pizza town, NJ&quot; tabindex=&quot;0&quot; type=&quot;checkbox&quot; role=&quot;checkbox&quot; aria-hidden=&quot;false&quot; class=&quot;md-checked&quot; aria-checked=&quot;true&quot; checked=&quot;checked&quot;&gt;...&lt;/md-checkbox&gt; is not clickable at point (976, 267). Other element would receive the click: &lt;div class=&quot;md-dialog-container ng-scope&quot; tabindex=&quot;-1&quot; style=&quot;top: 0px; height: 670px;&quot;&gt;...&lt;/div&gt;
+</pre></div><a href='#' onClick='toggleBox("stack-trace2112135199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2112135199'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
 System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
+Session ID: ec04b3286bef8d82f12aee44c056ec58
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -182,34 +184,8 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 <td>LocationTests.LocationTestSuite@464bee09</td></tr>
 <tr>
 <td title='LocationTests.LocationTestSuite.reusedBuildingTest()'><b>reusedBuildingTest</b><br>Test class: LocationTests.LocationTestSuite</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//form/div/md-dialog-content/div/div/md-input-container[1]/input[1]&quot;}
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
-*** Element info: {Using=xpath, value=//form/div/md-dialog-content/div/div/md-input-container[1]/input[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at com.worldgate.buildingMethods.AddBuildingMethods.readdBuilding(AddBuildingMethods.java:95)
+<td><div><pre>java.lang.NullPointerException
+	at com.worldgate.buildingMethods.AddBuildingMethods.readdBuilding(AddBuildingMethods.java:96)
 	at LocationTests.LocationTestSuite.reusedBuildingTest(LocationTestSuite.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -236,35 +212,9 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1544067887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1544067887'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//form/div/md-dialog-content/div/div/md-input-container[1]/input[1]&quot;}
-  (Session info: chrome=66.0.3359.181)
-  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
-*** Element info: {Using=xpath, value=//form/div/md-dialog-content/div/div/md-input-container[1]/input[1]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at com.worldgate.buildingMethods.AddBuildingMethods.readdBuilding(AddBuildingMethods.java:95)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1519911160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1519911160'><pre>java.lang.NullPointerException
+	at com.worldgate.buildingMethods.AddBuildingMethods.readdBuilding(AddBuildingMethods.java:96)
 	at LocationTests.LocationTestSuite.reusedBuildingTest(LocationTestSuite.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -292,11 +242,11 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>20</td>
+<td>4</td>
 <td>LocationTests.LocationTestSuite@464bee09</td></tr>
 <tr>
 <td title='LocationTests.LocationTestSuite.reusedNameTest()'><b>reusedNameTest</b><br>Test class: LocationTests.LocationTestSuite</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;md-icon-button md-button md-ink-ripple&quot; type=&quot;button&quot; ng-transclude=&quot;&quot; id=&quot;locAdd&quot; ng-click=&quot;lCtrl.addLocation()&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Add location&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/button&gt; is not clickable at point (787, 199). Other element would receive the click: &lt;md-backdrop class=&quot;md-dialog-backdrop md-opaque ng-scope ng-animate ng-leave ng-leave-active&quot; aria-hidden=&quot;false&quot; data-ng-animate=&quot;2&quot; style=&quot;position: fixed;&quot;&gt;&lt;/md-backdrop&gt;
+<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;md-icon-button md-button md-ink-ripple&quot; type=&quot;button&quot; ng-transclude=&quot;&quot; id=&quot;locAdd&quot; ng-click=&quot;lCtrl.addLocation()&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Add location&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/button&gt; is not clickable at point (787, 199). Other element would receive the click: &lt;div class=&quot;md-dialog-container ng-scope&quot; tabindex=&quot;-1&quot; style=&quot;top: 0px; height: 670px;&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -304,7 +254,7 @@ Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &a
 System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
+Session ID: ec04b3286bef8d82f12aee44c056ec58
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -347,7 +297,7 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div><a href='#' onClick='toggleBox("stack-trace79919963", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace79919963'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;md-icon-button md-button md-ink-ripple&quot; type=&quot;button&quot; ng-transclude=&quot;&quot; id=&quot;locAdd&quot; ng-click=&quot;lCtrl.addLocation()&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Add location&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/button&gt; is not clickable at point (787, 199). Other element would receive the click: &lt;md-backdrop class=&quot;md-dialog-backdrop md-opaque ng-scope ng-animate ng-leave ng-leave-active&quot; aria-hidden=&quot;false&quot; data-ng-animate=&quot;2&quot; style=&quot;position: fixed;&quot;&gt;&lt;/md-backdrop&gt;
+<div class='stack-trace' id='stack-trace79919963'><pre>org.openqa.selenium.WebDriverException: unknown error: Element &lt;button class=&quot;md-icon-button md-button md-ink-ripple&quot; type=&quot;button&quot; ng-transclude=&quot;&quot; id=&quot;locAdd&quot; ng-click=&quot;lCtrl.addLocation()&quot; ng-show=&quot;isManager&quot; aria-label=&quot;Add location&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/button&gt; is not clickable at point (787, 199). Other element would receive the click: &lt;div class=&quot;md-dialog-container ng-scope&quot; tabindex=&quot;-1&quot; style=&quot;top: 0px; height: 670px;&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=66.0.3359.181)
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -355,7 +305,7 @@ Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &a
 System info: host: &apos;DESKTOP-HDQ72GM&apos;, ip: &apos;192.168.142.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\pinky\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
-Session ID: c217b1cfe061db5f9b229bc970ca666e
+Session ID: ec04b3286bef8d82f12aee44c056ec58
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -432,8 +382,8 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace773238925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace773238925'><pre>java.lang.AssertionError
+</pre></div><a href='#' onClick='toggleBox("stack-trace795590320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace795590320'><pre>java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
@@ -498,8 +448,8 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace641664202", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace641664202'><pre>java.lang.AssertionError
+</pre></div><a href='#' onClick='toggleBox("stack-trace2114629072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2114629072'><pre>java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
@@ -543,12 +493,12 @@ Session ID: c217b1cfe061db5f9b229bc970ca666e
 <tr>
 <td title='LocationTests.LocationTestSuite.invalidLocationTest()'><b>invalidLocationTest</b><br>Test class: LocationTests.LocationTestSuite</td>
 <td></td>
-<td>0</td>
+<td>1</td>
 <td>LocationTests.LocationTestSuite@464bee09</td></tr>
 <tr>
 <td title='LocationTests.LocationTestSuite.navigationTest()'><b>navigationTest</b><br>Test class: LocationTests.LocationTestSuite</td>
 <td></td>
-<td>2</td>
+<td>3</td>
 <td>LocationTests.LocationTestSuite@464bee09</td></tr>
 </table><p>
 </body>

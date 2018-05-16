@@ -5,12 +5,9 @@
     <classes>
       <class name="LocationTests.LocationTestSuite">
         <methods>
-          <include name="validBuildingTest"/>
           <include name="reusedBuildingTest"/>
-          <include name="validLocationTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="invalidBuildingTest"/>
           <include name="reusedNameTest"/>
         </methods>
       </class> <!-- LocationTests.LocationTestSuite -->

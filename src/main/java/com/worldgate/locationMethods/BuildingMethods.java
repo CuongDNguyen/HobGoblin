@@ -1,4 +1,4 @@
-package com.worldgate.buildingMethods;
+package com.worldgate.locationMethods;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,14 +9,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
-public class AddBuildingMethods {
+public class BuildingMethods {
 	private static Properties prop = new Properties();
-	private static AddBuildingMethods a = null;
+	private static BuildingMethods a = null;
 
-	private AddBuildingMethods() {
+	private BuildingMethods() {
 		super();
-		InputStream locProps = AddBuildingMethods.class.getClassLoader()
+		InputStream locProps = BuildingMethods.class.getClassLoader()
 				.getResourceAsStream("location.properties");
 		try {
 			prop.load(locProps);
@@ -25,24 +26,30 @@ public class AddBuildingMethods {
 		}
 	}
 	
-	public static AddBuildingMethods getAddBldgInstance() {
+	public static BuildingMethods getAddBldgInstance() {
 		if(a==null) {
-			a = new AddBuildingMethods();
+			a = new BuildingMethods();
 		}
 		return a;
 	}
 	
-	public static boolean addValidBuilding(WebDriver wd) {
+	public static int addValidBuilding(WebDriver wd) {
 		try {
 			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		Random gen = new Random();
-		int g = gen.nextInt(1000);
+		int g = gen.nextInt(5000);
 		if(wd.getCurrentUrl().contains("location")) {
-			wd.findElement(By.xpath(prop.getProperty("Checkbox"))).click();
-			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
+			WebElement checkbox = wd.findElement(By.xpath(prop.getProperty("Checkbox")));
+			WebElement addBldg = wd.findElement(By.id(prop.getProperty("addBldg")));
+			
+			Actions actions = new Actions(wd);
+			
+			actions.moveToElement(checkbox).click().perform();
+			actions.moveToElement(addBldg).click().perform();
+			
 			
 			WebElement name = wd.findElement(By.xpath(prop.getProperty("BldgName")));
 			name.sendKeys("Test Building " + g);
@@ -50,16 +57,16 @@ public class AddBuildingMethods {
 			WebElement save = wd.findElement(By.xpath(prop.getProperty("BldgSave")));
 			save.click();
 	
-//			try {
-//				Thread.sleep(2000);
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
-			return wd.getPageSource().contains("Test Building " + g);
+			return g;
 		}
 		else {
-			return false;
+			return 0;
 		}
 	}
 	
@@ -70,8 +77,14 @@ public class AddBuildingMethods {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
-			WebElement save = wd.findElement(By.xpath(prop.getProperty("LocSave")));
+			WebElement checkbox = wd.findElement(By.xpath(prop.getProperty("Checkbox")));
+			WebElement addBldg = wd.findElement(By.id(prop.getProperty("addBldg")));
+			
+			Actions actions = new Actions(wd);
+			
+			actions.moveToElement(checkbox).click().perform();
+			actions.moveToElement(addBldg).click().perform();
+			WebElement save = wd.findElement(By.xpath(prop.getProperty("BldgSave")));
 			save.click();
 			WebElement name = wd.findElement(By.xpath(prop.getProperty("BldgName")));
 			name.sendKeys(Keys.ESCAPE);

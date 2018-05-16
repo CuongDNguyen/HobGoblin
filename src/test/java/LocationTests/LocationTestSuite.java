@@ -13,8 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import com.worldgate.buildingMethods.AddBuildingMethods;
-import com.worldgate.locationMethods.AddLocationMethods;
+import com.worldgate.locationMethods.BuildingMethods;
+import com.worldgate.locationMethods.LocationMethods;
 import com.worldgate.locationMethods.McCombLogin;
 
 public class LocationTestSuite {
@@ -22,8 +22,8 @@ public class LocationTestSuite {
 	static int locNum, bldgNum, rmNum;
 	@BeforeSuite
 	public void setup() {
-		AddLocationMethods a = AddLocationMethods.getAddLocInstance();
-		AddBuildingMethods b = AddBuildingMethods.getAddBldgInstance();
+		LocationMethods a = LocationMethods.getAddLocInstance();
+		BuildingMethods b = BuildingMethods.getAddBldgInstance();
 		File chrome = new File("src/main/resources/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		wd = new ChromeDriver();
@@ -43,35 +43,54 @@ public class LocationTestSuite {
 	
 	@Test (priority = 2, groups = "location")
 	public void validLocationTest() {
-		locNum = AddLocationMethods.addValidLocation(wd);
-//		System.out.println("Number: " + locNum);
-		System.out.println(wd.getCurrentUrl());
+		locNum = LocationMethods.addValidLocation(wd);
 		assertTrue(wd.getPageSource().contains("Unused Test Location " + locNum));
 	}
 	
 	@Test (priority = 2, groups = "location")
 	public void invalidLocationTest() {
-		assertFalse(AddLocationMethods.addInvalidLocation(wd));
+		assertFalse(LocationMethods.addInvalidLocation(wd));
 	}
 	
 	@Test (priority = 2, groups = "location")
 	public void reusedNameTest() {
-		assertTrue(AddLocationMethods.addPrevUsedName(wd));
+		assertTrue(LocationMethods.addPrevUsedName(wd));
 	}
 	
 	@Test (priority = 3, groups = "building")
 	public void validBuildingTest() {
-		assertTrue(AddBuildingMethods.addValidBuilding(wd));
+		bldgNum = BuildingMethods.addValidBuilding(wd);
+		assertTrue(wd.getPageSource().contains("Test Building " + bldgNum));
 	}
 	
 	@Test (priority = 4, groups = "building")
 	public void invalidBuildingTest() {
-		assertFalse(AddBuildingMethods.addValidBuilding(wd));
+		assertFalse(BuildingMethods.addInvalidBuilding(wd));
 	}
 	
 	@Test(priority = 5, groups = "building")
 	public void reusedBuildingTest() {
-		assertTrue(AddBuildingMethods.readdBuilding(wd));
+		assertTrue(BuildingMethods.readdBuilding(wd));
+	}
+	
+	@Test(priority = 6, groups = "location")
+	public void editLocationTest() {
+		
+	}
+	
+	@Test(priority = 6, groups = "building")
+	public void editBuildingTest() {
+		
+	}	
+	
+	@Test(priority = 7, groups = "location")
+	public void deleteLocationTest() {
+		
+	}
+	
+	@Test(priority = 7, groups = "building")
+	public void deleteBuildingTest() {
+		
 	}
 }
 
