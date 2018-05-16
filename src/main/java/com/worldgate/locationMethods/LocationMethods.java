@@ -10,13 +10,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AddLocationMethods {
+public class LocationMethods {
 	private static Properties prop = new Properties();
-	private static AddLocationMethods a = null;
+	private static LocationMethods a = null;
 
-	private AddLocationMethods() {
+	private LocationMethods() {
 		super();
-		InputStream locProps = AddLocationMethods.class.getClassLoader()
+		InputStream locProps = LocationMethods.class.getClassLoader()
 				.getResourceAsStream("location.properties");
 		try {
 			prop.load(locProps);
@@ -25,9 +25,9 @@ public class AddLocationMethods {
 		}
 	}
 	
-	public static AddLocationMethods getAddLocInstance() {
+	public static LocationMethods getAddLocInstance() {
 		if(a==null) {
-			a = new AddLocationMethods();
+			a = new LocationMethods();
 		}
 		return a;
 	}
@@ -40,7 +40,7 @@ public class AddLocationMethods {
 				e.printStackTrace();
 			}
 			Random gen = new Random();
-			int g = gen.nextInt(1000);
+			int g = gen.nextInt(5000);
 			wd.findElement(By.id(prop.getProperty("addLocationButton"))).click();
 			WebElement name=wd.findElement(By.xpath(prop.getProperty("LocName")));
 			name.sendKeys("Unused Test Location " + g);
@@ -66,11 +66,11 @@ public class AddLocationMethods {
 			WebElement save = wd.findElement(By.xpath(prop.getProperty("LocSave")));
 			save.click();
 
-//			try {
-//				Thread.sleep(200);
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			
 			return g;
 		}
