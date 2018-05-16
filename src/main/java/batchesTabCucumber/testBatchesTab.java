@@ -1,4 +1,4 @@
-package com.worldgate.test.batchesTab;
+package batchesTabCucumber;
 
 import java.io.File;
 import java.text.ParseException;
@@ -18,7 +18,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class testBatchesTab {
-	
+
 	static WebDriver wd;
 	static {
 		File chrome = new File("src/main/resources/chromedriver.exe");
@@ -26,9 +26,9 @@ public class testBatchesTab {
 		wd = new ChromeDriver();
 		wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
-	
+
 	public static final SimpleDateFormat formatter = new SimpleDateFormat("MMM dd, yyyy");
-	
+
 	public static <T extends Comparable> boolean isSortedAscending(List<T> array) {
 		if (array.size() > 0) {
 			T temp = array.get(0);
@@ -41,7 +41,7 @@ public class testBatchesTab {
 		}
 		return true;
 	}
-	
+
 	public static <T extends Comparable> boolean isSortedDescending(List<T> array) {
 		if (array.size() > 0) {
 			T temp = array.get(0);
@@ -54,7 +54,7 @@ public class testBatchesTab {
 		}
 		return true;
 	}
-	
+
 	public static boolean isDateSortedAscending(List<Date> array) {
 		if (array.size() > 0) {
 			Date temp = array.get(0);
@@ -67,7 +67,7 @@ public class testBatchesTab {
 		}
 		return true;
 	}
-	
+
 	public static boolean isDateSortedDescending(List<Date> array) {
 		if (array.size() > 0) {
 			Date temp = array.get(0);
@@ -80,7 +80,7 @@ public class testBatchesTab {
 		}
 		return true;
 	}
-	
+
 	public static boolean sortTestDate(int column, String order) throws ParseException {
 		List<WebElement> rows = wd.findElements(By.xpath("//table/tbody/tr"));
 		List<Date> dates = new ArrayList<>();
@@ -99,7 +99,7 @@ public class testBatchesTab {
 			return true;
 		}
 	}
-	
+
 	public static boolean sortTestString(int column, String order) throws ParseException {
 		List<WebElement> rows = wd.findElements(By.xpath("//table/tbody/tr"));
 		List<String> strings = new ArrayList<>();
@@ -118,7 +118,7 @@ public class testBatchesTab {
 			return true;
 		}
 	}
-	
+
 	public static boolean sortTestInt(int column, String order) throws ParseException {
 		List<WebElement> rows = wd.findElements(By.xpath("//table/tbody/tr"));
 		List<Integer> nums = new ArrayList<>();
@@ -179,7 +179,7 @@ public class testBatchesTab {
 	@Given("^I clicked on start date column\\(batches\\)$")
 	public void i_clicked_on_start_date_column_batches() throws Throwable {
 	    wd.findElement(By.xpath("//table/thead/tr/th[9]")).click();
-	    
+
 	}
 
 	@Given("^I have already clicked on start date once$")
@@ -330,7 +330,7 @@ public class testBatchesTab {
 	@Then("^batches should be in descending order according to curriculum$")
 	public void batches_should_be_in_descending_order_according_to_curriculum() throws Throwable {
 		Assert.assertTrue(sortTestString(3, "descending"));
-	    
+
 	}
 
 	@Given("^I click on name column\\(batches\\)$")

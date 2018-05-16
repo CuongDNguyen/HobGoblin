@@ -1,4 +1,4 @@
-package com.worldgate.test.overviewTab;
+package overviewTabCucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
