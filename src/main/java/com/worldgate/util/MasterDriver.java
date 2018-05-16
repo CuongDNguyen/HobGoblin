@@ -26,8 +26,9 @@ public class MasterDriver {
             File chrome = new File("src/main/resources/chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
             driver = new ChromeDriver(options);
-            driver.get("https://dev.assignforce.revaturelabs.com/home");
-            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
+            driver.manage().timeouts().setScriptTimeout(10,TimeUnit.SECONDS);
         }
         return driver;
     }

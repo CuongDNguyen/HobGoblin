@@ -25,6 +25,16 @@ public class LoginPage {
         return element;
     }
 
+    public static WebElement forgotPassword(WebDriver wd){
+        element = wd.findElement(By.id(PropUtil.getVal("forgotPassword")));
+        return element;
+    }
+
+    public static WebElement forgotPasswordHeader(WebDriver wd){
+        element = wd.findElement(By.id(PropUtil.getVal("forgotPasswordHead")));
+        return element;
+    }
+
 
 
     @FindBy(xpath="//a[@href='mercurywelcome.php']")
