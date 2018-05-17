@@ -1,4 +1,4 @@
-package com.worldgate.test.overviewTab;
+package overviewTabCucumber;
 
 import java.io.File;
 import java.text.ParseException;
