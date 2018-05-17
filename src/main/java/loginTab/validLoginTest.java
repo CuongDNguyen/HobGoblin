@@ -37,7 +37,7 @@ public class validLoginTest {
 //		prop.load(input);
 		dr.findElement(By.xpath("//input[@id='username']")).sendKeys("test.trainer@revature.com.int1");
 		dr.findElement(By.xpath("//input[@id='password']")).sendKeys("trainer123");
-		dr.findElement(By.xpath("//input[@id='Login']")).click();
+			dr.findElement(By.xpath("//input[@id='Login']")).click();
 	}
 
 	@Then("^home page should be displayed$")
