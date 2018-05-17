@@ -41,7 +41,7 @@ public class LocationTestSuite {
 		  assertTrue(com.worldgate.locationMethods.PageMethods.navigateTo(wd).equals("https://dev.assignforce.revaturelabs.com/locations"));
 	}
 	
-	@Test (priority = 2, groups = "location")
+	@Test (priority = 3, groups = "location")
 	public void validLocationTest() {
 		locNum = LocationMethods.addValidLocation(wd);
 		assertTrue(wd.getPageSource().contains("Unused Test Location " + locNum));
@@ -57,7 +57,7 @@ public class LocationTestSuite {
 		assertTrue(LocationMethods.addPrevUsedName(wd));
 	}
 	
-	@Test (priority = 3, groups = "building")
+	@Test (priority = 6, groups = "building")
 	public void validBuildingTest() {
 		bldgNum = BuildingMethods.addValidBuilding(wd);
 		assertTrue(wd.getPageSource().contains("Test Building " + bldgNum));
@@ -73,24 +73,34 @@ public class LocationTestSuite {
 		assertTrue(BuildingMethods.readdBuilding(wd));
 	}
 	
-	@Test(priority = 6, groups = "location")
-	public void editLocationTest() {
-		
+	@Test(priority = 7, groups = "building")
+	public void addBuildingToMultipleLocationsTest() {
+		assertFalse(BuildingMethods.addBuildingToMultipleLocations(wd));
 	}
-	
-	@Test(priority = 6, groups = "building")
-	public void editBuildingTest() {
-		
-	}	
 	
 	@Test(priority = 7, groups = "location")
-	public void deleteLocationTest() {
-		
+	public void editLocationTest() {
+		assertTrue(LocationMethods.editLocation(locNum, wd));
 	}
 	
-	@Test(priority = 7, groups = "building")
-	public void deleteBuildingTest() {
-		
+//	@Test(priority = 6, groups = "building")
+//	public void editBuildingTest() {
+//		assertTrue()
+//	}	
+	
+//	@Test(priority=7, groups = "location")
+//	public void editMultipleLocationsTest() {
+//		
+//	}
+	
+	@Test(priority = 8, groups = "location")
+	public void deleteLocationTest() {
+		assertTrue(LocationMethods.deleteLocation(locNum, wd));
 	}
+	
+//	@Test(priority = 7, groups = "building")
+//	public void deleteBuildingTest() {
+//		
+//	}
 }
 
