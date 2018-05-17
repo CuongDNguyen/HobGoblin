@@ -33,7 +33,7 @@ public class LocationTestSuite {
 	
 	@AfterSuite
 	public void tearDown() {
-		//wd.close();
+		wd.quit();
 	}
 	
 	@Test (priority = 1)
@@ -82,6 +82,11 @@ public class LocationTestSuite {
 	public void editLocationTest() {
 		assertTrue(LocationMethods.editLocation(locNum, wd));
 	}
+	
+//	@Test(priority=7, groups="location")
+//	public void editLocationToTakenNameTest() {
+//		assertTrue(LocationMethods.editToExistingName(wd));
+//	}
 	
 //	@Test(priority = 6, groups = "building")
 //	public void editBuildingTest() {

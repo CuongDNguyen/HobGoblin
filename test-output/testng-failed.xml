@@ -7,13 +7,10 @@
         <methods>
           <include name="validBuildingTest"/>
           <include name="reusedBuildingTest"/>
-          <include name="addBuildingToMultipleLocationsTest"/>
           <include name="deleteLocationTest"/>
-          <include name="validLocationTest"/>
           <include name="setup"/>
           <include name="tearDown"/>
           <include name="editLocationTest"/>
-          <include name="invalidBuildingTest"/>
           <include name="reusedNameTest"/>
         </methods>
       </class> <!-- LocationTests.LocationTestSuite -->

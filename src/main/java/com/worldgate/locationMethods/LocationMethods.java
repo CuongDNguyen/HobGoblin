@@ -50,12 +50,12 @@ public class LocationMethods {
 			WebElement name=wd.findElement(By.xpath(prop.getProperty("LocName")));
 			name.sendKeys("Unused Test Location " + g);
 			try {
-				Thread.sleep(400);
+				Thread.sleep(200);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			WebElement city = wd.findElement(By.xpath(prop.getProperty("LocCity")));
-			city.sendKeys("Worldgate Test City " + g);
+			city.sendKeys("Worldgate Test City");
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
@@ -110,22 +110,16 @@ public class LocationMethods {
 	public static Boolean addPrevUsedName(WebDriver wd) {
 		if(wd.getCurrentUrl().contains("location")) {
 			try {
-				Thread.sleep(200);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			WebDriverWait wait = new WebDriverWait(wd, 10);
-			wait.pollingEvery(Duration.ofMillis(200));
-			wait.until(ExpectedConditions.elementToBeClickable(By.id(prop.getProperty("addLocationButton"))));
-			wd.findElement(By.id(prop.getProperty("addLocationButton"))).click();
-			
-			WebElement name=wd.findElement(By.xpath(prop.getProperty("LocName")));
-			name.sendKeys("Worldgate Test Location");
-			try {
 				Thread.sleep(400);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			WebDriverWait wait = new WebDriverWait(wd, 10);
+			wait.until(ExpectedConditions.elementToBeClickable(By.id(prop.getProperty("addLocationButton"))));
+			WebElement add = wd.findElement(By.id(prop.getProperty("addLocationButton")));
+			add.click();
+			WebElement name=wd.findElement(By.xpath(prop.getProperty("LocName")));
+			name.sendKeys("Worldgate Test Location");
 			WebElement city = wd.findElement(By.xpath(prop.getProperty("LocCity")));
 			city.sendKeys("Old Hometown");
 			WebElement state = wd.findElement(By.xpath(prop.getProperty("LocState")));
@@ -148,22 +142,28 @@ public class LocationMethods {
 	
 	public static boolean editLocation(int id, WebDriver wd) {
 		if(wd.getCurrentUrl().contains("location")) {
-			WebElement checkbox = wd.findElement(By.xpath("//*[@aria-label=\"Toggle  Worldgate Test City "
-					+ id +  ", KS]"));
-			WebElement editBldg = wd.findElement(By.xpath(prop.getProperty("edit")));
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			WebElement checkbox = wd.findElement(By.xpath(prop.getProperty("DelBox")));
+			WebElement editBldg = wd.findElement(By.id(prop.getProperty("edit")));
 			
 			Actions actions = new Actions(wd);
 			
 			actions.moveToElement(checkbox).click().perform();
-			actions.moveToElement(editBldg).click().perform();
+			actions.moveToElement(wd.findElement(By.name("locations"))).perform();
+			editBldg.click();
 			
 			WebElement editName = wd.findElement(By.xpath(prop.getProperty("editName")));
+			editName.clear();
 			editName.sendKeys("Edited Test Location " + id);
 			
 			WebElement editSave = wd.findElement(By.xpath(prop.getProperty("editSave")));
 			editSave.click();
 			try {
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -177,6 +177,12 @@ public class LocationMethods {
 	
 	public static boolean editToExistingName(WebDriver wd) {
 		if(wd.getCurrentUrl().contains("location")) {
+			System.out.println("Trying to edit to existing name");
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 			List<WebElement> checks = wd.findElements(By.tagName("md-checkbox"));
 			WebElement editBldg = wd.findElement(By.xpath(prop.getProperty("edit")));
 			
@@ -187,7 +193,14 @@ public class LocationMethods {
 			
 			WebElement editName = wd.findElement(By.xpath(prop.getProperty("editName")));
 			editName.sendKeys("Building and Room Test Location");
-			return true;
+			wd.findElement(By.xpath(prop.getProperty("BldgSave"))).click();
+			checks.get(0).click();
+			if(wd.getPageSource().contains("Building and Room Test Location")) {
+				return false;
+			}
+			else {
+				return true;
+			}
 		}
 		else {
 			return false;
@@ -223,16 +236,16 @@ public class LocationMethods {
 	
 	public static boolean deleteLocation(int id, WebDriver wd) {
 		if(wd.getCurrentUrl().contains("location")) {
-			WebElement checkbox = wd.findElement(By.xpath("//*[@aria-label=\"Toggle  Worldgate Test City "
-					+ id +  ", KS]"));
+			WebElement checkbox = wd.findElement(By.xpath(prop.getProperty("DelBox")));
 			WebElement delete = wd.findElement(By.xpath(prop.getProperty("delete")));
 			
 			Actions actions = new Actions(wd);
 			
 			actions.moveToElement(checkbox).click().perform();
-			actions.moveToElement(delete).click().perform();
-			
-			if(wd.getPageSource().contains("Worldgate Test City " + id)) {
+			actions.moveToElement(wd.findElement(By.name("locations"))).perform();
+			delete.click();
+			wd.findElement(By.xpath(prop.getProperty("DelYes"))).click();
+			if(wd.getPageSource().contains("Worldgate Test City")) {
 				return false;
 			}
 			else {

@@ -1,7 +1,11 @@
 package com.worldgate.locationMethods;
 
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 import java.util.Random;
 
@@ -10,6 +14,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BuildingMethods {
 	private static Properties prop = new Properties();
@@ -35,7 +41,7 @@ public class BuildingMethods {
 	
 	public static int addValidBuilding(WebDriver wd) {
 		try {
-			Thread.sleep(200);
+			Thread.sleep(1500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -47,10 +53,9 @@ public class BuildingMethods {
 			
 			Actions actions = new Actions(wd);
 			
-			actions.moveToElement(checkbox).click().perform();
-			actions.moveToElement(addBldg).click().perform();
-			
-			
+//			actions.moveToElement(checkbox).click().perform();
+			actions.moveToElement(wd.findElement(By.name("locations"))).perform();
+			addBldg.click();
 			WebElement name = wd.findElement(By.xpath(prop.getProperty("BldgName")));
 			name.sendKeys("Test Building " + g);
 			
@@ -62,7 +67,8 @@ public class BuildingMethods {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			
+			actions.moveToElement(checkbox).click().perform();
+			actions.moveToElement(wd.findElement(By.name("locations"))).perform();
 			return g;
 		}
 		else {
@@ -81,9 +87,12 @@ public class BuildingMethods {
 			WebElement addBldg = wd.findElement(By.id(prop.getProperty("addBldg")));
 			
 			Actions actions = new Actions(wd);
-			
+			WebDriverWait wait = new WebDriverWait(wd, 10);
+			wait.pollingEvery(Duration.ofMillis(200));
+			wait.until(ExpectedConditions.elementToBeClickable(By.id(prop.getProperty("addBldg"))));
 			actions.moveToElement(checkbox).click().perform();
-			actions.moveToElement(addBldg).click().perform();
+			actions.moveToElement(wd.findElement(By.name("locations"))).perform();
+			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
 			WebElement save = wd.findElement(By.xpath(prop.getProperty("BldgSave")));
 			save.click();
 			WebElement name = wd.findElement(By.xpath(prop.getProperty("BldgName")));
@@ -99,10 +108,15 @@ public class BuildingMethods {
 	public static boolean readdBuilding(WebDriver wd) {
 		if(wd.getCurrentUrl().contains("location")) {
 			try {
-				Thread.sleep(200);
+				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+//			WebDriverWait wait = new WebDriverWait(wd, 10);
+//			WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
+//	        assertTrue(toast.getText().contains("Failed to add building."));
+//	        wait.until(ExpectedConditions.invisibilityOf(toast));
+//	        wd.findElement(By.tagName("button")).click();
 			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
 			
 			WebElement name = wd.findElement(By.xpath(prop.getProperty("BldgName")));
@@ -116,8 +130,29 @@ public class BuildingMethods {
 //			} catch (InterruptedException e) {
 //				e.printStackTrace();
 //			}
-			
+			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
+
 			return wd.getPageSource().contains("Used Building ");
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public static boolean addBuildingToMultipleLocations(WebDriver wd) {
+		if(wd.getCurrentUrl().contains("location")) {
+			WebDriverWait wait = new WebDriverWait(wd, 10);
+			List<WebElement> checks = wd.findElements(By.tagName("md-checkbox"));
+			wait.until(ExpectedConditions.elementToBeClickable(By.tagName("md-checkbox")));
+			checks.get(0).click();
+			checks.get(1).click();
+			wd.findElement(By.id(prop.getProperty("addBldg"))).click();
+			
+			boolean popup = wd.getPageSource().contains("Creating Building");
+			checks.get(0).click();
+			checks.get(1).click();
+			
+			return popup;
 		}
 		else {
 			return false;
