@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false" configfailurepolicy="continue">
   <test name="Test">
     <classes>
-      <class name="com.revature.tests.LocationTests"/>
+      <class name="LocationTests.LocationTestSuite"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
