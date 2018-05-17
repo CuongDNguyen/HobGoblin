@@ -5,20 +5,25 @@ import com.worldgate.util.MasterDriver;
 import com.worldgate.util.PropUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 
 public class LoginTests {
 
     private static WebDriver driver;
+    private static Wait wait;
 
     @BeforeSuite
     static void baseMethod() {
         driver = MasterDriver.getDriver();
     }
 
-    @Test(groups = {"logintest"})
+
+    @Test(groups = {"loginTrainer"}, priority = 1)
     public void loginTrainer() throws InterruptedException {
         driver.get("https://dev.assignforce.revaturelabs.com/home");
         LoginPage.user(driver).sendKeys(PropUtil.getVal("trainerUser"));
@@ -27,13 +32,9 @@ public class LoginTests {
         if (driver.getCurrentUrl().contains(PropUtil.getVal("homePage"))) {
             Assert.assertTrue(true);
         }
-        Thread.sleep(2000);
-        String tempxpath = PropUtil.getVal("logoutButton");
-        driver.findElement(By.xpath(tempxpath)).click();
-
     }
 
-    @Test(groups = {"logintest"})
+    @Test(groups = {"loginVP"}, priority = 1)
     public void loginVP() throws InterruptedException {
         driver.get("https://dev.assignforce.revaturelabs.com/home");
         LoginPage.user(driver).sendKeys(PropUtil.getVal("vpUser"));
@@ -42,17 +43,51 @@ public class LoginTests {
         if (driver.getCurrentUrl().contains(PropUtil.getVal("homePage"))) {
             Assert.assertTrue(true);
         }
-        Thread.sleep(2000);
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openBatches() throws InterruptedException {
+        LoginPage.openBatches(driver).click();
+
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openLocations() throws InterruptedException {
+        LoginPage.openLocations(driver).click();
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openCurricula() throws InterruptedException {
+        LoginPage.openCurricula(driver).click();
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openTrainers() throws InterruptedException {
+        LoginPage.openTrainers(driver).click();
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openProfile() throws InterruptedException {
+        LoginPage.openProfile(driver).click();
+    }
+
+    @Ignore
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openReports() throws InterruptedException {
+        LoginPage.openReports(driver).click();
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 2)
+    public void openSettings() throws InterruptedException {
+        LoginPage.openSettings(driver).click();
+    }
+
+    @Test(groups = {"loginVP", "loginTrainer"}, priority = 3)
+    public void logOut() {
+
         String tempxpath = PropUtil.getVal("logoutButton");
         driver.findElement(By.xpath(tempxpath)).click();
     }
-
-//    @AfterMethod(onlyForGroups = "logintest")
-//    static void logout() {
-//        String tempxpath = PropUtil.getVal("logoutButton");
-//        driver.findElement(By.xpath(tempxpath)).click();
-//        System.out.println("Logging out");
-//    }
 
     @Test
     public void forgotPassword() {
@@ -63,7 +98,6 @@ public class LoginTests {
             Assert.assertTrue(true);
         }
     }
-
 
 
     @AfterSuite
