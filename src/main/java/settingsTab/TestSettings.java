@@ -4,6 +4,7 @@ import static org.testng.Assert.assertTrue;
 import static org.testng.Assert.expectThrows;
 import static org.testng.Assert.assertEquals;
 
+import java.io.File;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -55,13 +56,13 @@ public class TestSettings {
 	@BeforeClass
 	public static void setUpClass() {
 		// Windows
-//		File chrome = new File("src/main/resources/chromedriver.exe");
-//		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
-//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+		File chrome = new File("src/main/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 		
 		// Mac
-		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
-		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
+//		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
+//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
 		
 		driver = new ChromeDriver(options);
 		settingsPage = new SettingsPage(driver);
