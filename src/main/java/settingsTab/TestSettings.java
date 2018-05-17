@@ -1,9 +1,9 @@
 package settingsTab;
 
 import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.expectThrows;
 import static org.testng.Assert.assertEquals;
 
-import java.io.File;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -44,17 +44,24 @@ public class TestSettings {
 		element.clear();
 		element.sendKeys(input);
 	}
+	
+	private void clickSaveButton() {
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
+		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
+		wait.until(ExpectedConditions.invisibilityOf(toast));
+	}
 
 	@BeforeClass
 	public static void setUpClass() {
 		// Windows
-		File chrome = new File("src/main/resources/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
-		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+//		File chrome = new File("src/main/resources/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 		
 		// Mac
-//		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
-//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
+		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
+		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
 		
 		driver = new ChromeDriver(options);
 		settingsPage = new SettingsPage(driver);
@@ -90,8 +97,7 @@ public class TestSettings {
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.timeLineTrainersPerPageInput));
 
 		overwriteText(settingsPage.timeLineTrainersPerPageInput, input);
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton));
-		settingsPage.submitButton.click();
+		clickSaveButton();
 
 		navBarPage.batchesTab.click();
 		WebElement hideBatchlessTrainersCheckBox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"view\"]/md-card/md-content[3]/div/div[1]/div[1]/div[8]/md-checkbox[2]")));
@@ -115,7 +121,7 @@ public class TestSettings {
 			}
 		}
 
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		clickSaveButton();
 		navBarPage.batchesTab.click();
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/form/div[4]/div/md-input-container[1]/md-select")));
 		
@@ -139,8 +145,7 @@ public class TestSettings {
 		// Change the default batch length to 30 days, and click submit
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.defaultBatchLengthInput));
 		overwriteText(settingsPage.defaultBatchLengthInput, length);
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton));
-		settingsPage.submitButton.click();
+		clickSaveButton();
 
 		// Go to batches page, and check
 		navBarPage.batchesTab.click();
@@ -157,17 +162,8 @@ public class TestSettings {
 		assertEquals(ChronoUnit.WEEKS.between(startDate, endDate) + 1, Integer.parseInt(length));
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testClearButton() {
-		//		wait.until(ExpectedConditions.and(
-		//				ExpectedConditions.visibilityOf(settingsPage.timeLineTrainersPerPageInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.reportsOutgoingGradsInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.reportsCandidatesIncomingInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.minBatchSizeInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.maxBatchSizeInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.defaultBatchLengthInput),
-		//				ExpectedConditions.visibilityOf(settingsPage.minDayBetweenTrainerBatchesInput)
-		//				));
 		wait.until(ExpectedConditions.and(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
@@ -176,15 +172,16 @@ public class TestSettings {
 		String minimumBatchSizeValue = settingsPage.minBatchSizeInput.getAttribute("value");
 		String defaultBatchLengthValue = settingsPage.defaultBatchLengthInput.getAttribute("value");
 		String defaultBatchLocationValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[4]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
-		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
+		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]")).getText();
 
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.resetButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		assertTrue(toast.getText().contains("Settings reset."));
+		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
 		wait.until(ExpectedConditions.invisibilityOf(toast));
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testSubmitButton() {
 		wait.until(ExpectedConditions.and(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
@@ -194,18 +191,25 @@ public class TestSettings {
 		String minimumBatchSizeValue = settingsPage.minBatchSizeInput.getAttribute("value");
 		String defaultBatchLengthValue = settingsPage.defaultBatchLengthInput.getAttribute("value");
 		String defaultBatchLocationValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[4]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
-		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
+		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]")).getText();
 
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		assertTrue(toast.getText().contains("All settings have been updated"));
+		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
 		wait.until(ExpectedConditions.invisibilityOf(toast));
 
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(navBarPage.overviewTab)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(navBarPage.settingsTab)).click();
 
+		wait.until(ExpectedConditions.and(
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
+		
 		assertEquals(settingsPage.timeLineTrainersPerPageInput.getAttribute("value"), timeLineTrainersPerPageValue);
 		assertEquals(settingsPage.minBatchSizeInput.getAttribute("value"), minimumBatchSizeValue);
-		assertEquals(settingsPage.defaultBatchLengthInput, defaultBatchLengthValue);
+		assertEquals(settingsPage.defaultBatchLengthInput.getAttribute("value"), defaultBatchLengthValue);
 	}
 }
