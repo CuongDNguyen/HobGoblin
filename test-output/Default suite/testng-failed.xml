@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="LocationTests.LocationTestSuite">
+        <methods>
+          <include name="validBuildingTest"/>
+          <include name="reusedBuildingTest"/>
+          <include name="addBuildingToMultipleLocationsTest"/>
+          <include name="deleteLocationTest"/>
+          <include name="validLocationTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="editLocationTest"/>
+          <include name="reusedNameTest"/>
+        </methods>
+      </class> <!-- LocationTests.LocationTestSuite -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

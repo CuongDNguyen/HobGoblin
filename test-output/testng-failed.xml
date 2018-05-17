@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="LocationTests.LocationTestSuite">
+        <methods>
+          <include name="validBuildingTest"/>
+          <include name="reusedBuildingTest"/>
+          <include name="deleteLocationTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="editLocationTest"/>
+          <include name="reusedNameTest"/>
+        </methods>
+      </class> <!-- LocationTests.LocationTestSuite -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
