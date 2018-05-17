@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AssignforceSmokeTest" parallel="false" configfailurepolicy="continue">
+
+    <test name="Quick Trainer Smoke">
+        <groups>
+            <run>
+                <include name="forgotPassword"/>
+                <include name="loginTrainer"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="loginTestNG.LoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Quick VP Smoke">
+        <groups>
+            <run>
+                <include name="loginVP"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="loginTestNG.LoginTests"/>
+        </classes>
+    </test>
+
+
+</suite>
+
+
