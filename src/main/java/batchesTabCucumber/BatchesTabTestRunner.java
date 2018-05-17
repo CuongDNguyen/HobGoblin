@@ -1,4 +1,4 @@
-package com.worldgate.test.batchesTab;
+package batchesTabCucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
