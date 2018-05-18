@@ -47,6 +47,7 @@ public class trainerResume {
 
 	@Then("^download resume$")
 	public void download_resume() {
+		dr.quit();
 	}
 
 }

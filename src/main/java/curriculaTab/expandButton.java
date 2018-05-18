@@ -46,9 +46,9 @@ public class expandButton {
 //		input = new FileInputStream("src/test/resources/cuong.properties");
 //		prop.load(input);
 	       TimeUnit.SECONDS.sleep(1);
-	       dr.findElement(By.xpath("//*[@id=\\\"view\\\"]/md-card/md-content/md-card[1]/md-toolbar/div/button")).click();
+	       dr.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-card[1]/md-toolbar/div/button")).click();
 	       TimeUnit.SECONDS.sleep(1);
-	       dr.findElement(By.xpath("//*[@id=\\\"view\\\"]/md-card/md-content/md-card[2]/md-toolbar/div/button")).click();
+	       dr.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-card[2]/md-toolbar/div/button")).click();
 	}
 
 	@Then("^information should expand/collapse$")
@@ -57,14 +57,15 @@ public class expandButton {
 //		InputStream input = null;
 //		input = new FileInputStream("src/test/resources/cuong.properties");
 //		prop.load(input);
-		String realtimeCore = dr.findElement(By.xpath("//*[@id=\\\"coreArrow\\\"]")).getText();
-	       String realtimeFocus = dr.findElement(By.xpath("//*[@id=\\\"focusArrow\\\"]")).getText();
+		String realtimeCore = dr.findElement(By.xpath("//*[@id=\"coreArrow\"]")).getText();
+	       String realtimeFocus = dr.findElement(By.xpath("//*[@id=\"focusArrow\"]")).getText();
 	       if (realtimeCore.contains("keyboard_arrow_down") & realtimeFocus.contains("keyboard_arrow_down")) {
 	    	  Assert.assertFalse(false);
-	    	  dr.close();
+	    	  dr.quit();
 	       } else {
 	    	  Assert.assertFalse(true);
-	    	  dr.close();
+	    	  dr.quit();
 	       }
+	       dr.quit();
 	}
 }

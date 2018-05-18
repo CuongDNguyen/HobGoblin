@@ -18,19 +18,19 @@ When tab is clicked
 And calendar button clicked
 Then Calender shows
 
-#@newTrainer
-#Scenario: add new trainer
-#
-#Given navigate to vp trainer
-#When add trainer button clicked
-#And add trainer form filled
-#Then new trainer added
+@newTrainer
+Scenario: add new trainer
 
-#@trainerResume
-#Scenario: download trainer resume
-#Given navigate to vp trainer tab
-#When download resume button clicked
-#Then download resume
+Given navigate to vp trainer
+When add trainer button clicked
+And add trainer form filled
+Then new trainer added
+
+@trainerResume
+Scenario: download trainer resume
+Given navigate to vp trainer tab
+When download resume button clicked
+Then download resume
 
 
 

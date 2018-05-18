@@ -42,8 +42,8 @@ public class newTrainer {
 //		prop.load(input);
 		TimeUnit.SECONDS.sleep(7);
 		dr.findElement(By.xpath("/html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[5]/a")).click();
-		TimeUnit.SECONDS.sleep(2);
-		dr.findElement(By.xpath("//*[@id=\\\"view\\\"]/md-card/md-toolbar[1]/div/button[1]")).click();
+		TimeUnit.SECONDS.sleep(3);
+		dr.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-toolbar[1]/div/button[1]")).click();
 	}
 	
 	@And("^add trainer form filled$")
@@ -71,5 +71,6 @@ public class newTrainer {
 		} else {
 			Assert.assertFalse(true);
 		}
+		dr.quit();
 	}
 }

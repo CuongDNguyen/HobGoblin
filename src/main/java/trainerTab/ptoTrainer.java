@@ -56,6 +56,7 @@ public class ptoTrainer {
 
 	@Then("^Calender shows$")
 	public void calender_shows() {
+		dr.quit();
 	}
 
 }

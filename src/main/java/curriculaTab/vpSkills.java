@@ -56,6 +56,6 @@ public class vpSkills {
 		} else {
 			Assert.assertFalse(true);
 		}
-		dr.close();
+		dr.quit();
 	}
 }

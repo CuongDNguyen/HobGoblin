@@ -22,7 +22,7 @@ public class forgotpasswordTest {
 	WebDriver dr;
 
 	@Given("^navigate to login$")
-	public void navigate_to_login() throws IOException {
+	public void navigate_to_login() throws IOException, InterruptedException {
 //		Properties prop = new Properties();
 //		InputStream input = null;
 //		input = new FileInputStream("src/test/resources/cuong.properties");
@@ -31,14 +31,15 @@ public class forgotpasswordTest {
 		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
 		dr = new ChromeDriver();
 		dr.get("https://dev.assignforce.revaturelabs.com");
+		TimeUnit.SECONDS.sleep(2);
 	}
 
 	@When("^user click forgot password button$")
 	public void user_click_forgot_password_button() throws InterruptedException {
 //		Properties prop = new Properties();
 //		InputStream input = null;
-		dr.findElement(By.xpath("//*[@id=\\\"forgot_password_link\\\"]")).click();
-		TimeUnit.SECONDS.sleep(2);
+		dr.findElement(By.xpath("//*[@id=\"forgot_password_link\"]")).click();
+		TimeUnit.SECONDS.sleep(1);
 	}
 
 	@Then("^redirects to forgot password page$")
@@ -55,11 +56,11 @@ public class forgotpasswordTest {
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
-		String actual = dr.findElement(By.xpath("//*[@id=\\\"header\\\"]")).getText();
+		String actual = dr.findElement(By.xpath("//*[@id=\"header\"]")).getText();
 		if (actual.contains("Forgot Your Password")) {
 			Assert.assertFalse(false);
 		} else
 			Assert.assertFalse(true);
-		dr.close();
+		dr.quit();
 	}
 }

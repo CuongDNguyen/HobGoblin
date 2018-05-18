@@ -57,10 +57,11 @@ public class defaultCurricula {
 	       String realtimeFocus = dr.findElement(By.xpath("//*[@id=\"focusArrow\"]")).getText();
 	       if (realtimeCore.contains("keyboard_arrow_up") & realtimeFocus.contains("keyboard_arrow_up")) {
 	    	  Assert.assertFalse(false);
-	    	  dr.close();
+	    	  dr.quit();
 	       } else {
 	    	  Assert.assertFalse(true);
-	    	  dr.close();
+	    	  dr.quit();
 	       }
+	       dr.quit();
 		}
 	}

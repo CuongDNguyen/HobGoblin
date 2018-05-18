@@ -1,0 +1,64 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "login setup",
+        "description": "",
+        "id": "to-test-login-is-running;login-setup",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3094774694,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to assignforce page",
+            "match": {
+              "location": "loginTest.navigate()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1610508183,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user logged in with credentials",
+            "match": {
+              "location": "loginTest.login()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "home page should be displayed",
+            "match": {
+              "location": "loginTest.verifySuccessful()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To test login is running",
+    "description": "I want to run a login test.",
+    "id": "to-test-login-is-running",
+    "keyword": "Feature",
+    "uri": "C:/revature/webdriver2/src/test/resources/loginTest.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@loginTest"
+      }
+    ]
+  }
+]
