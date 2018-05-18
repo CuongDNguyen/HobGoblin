@@ -1,8 +1,8 @@
 package settingsTab;
 
 import static org.testng.Assert.assertTrue;
-import static org.testng.Assert.expectThrows;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
 
 import java.io.File;
 import java.time.Duration;
@@ -40,6 +40,11 @@ public class TestSettings {
 	public static Object[][] defaultBatchLengthProvider() {
 		return new Object[][] {{"11", "5/7/2018"}, {"12", "5/7/2018"}};
 	}
+	
+	@DataProvider(name = "DefaultBatchLocationProvider")
+	public static Object[][] defaultBatchLocationProvider() {
+		return new Object[][] {{"Revature"}, {"Tampa"}};
+	}
 
 	private void overwriteText(WebElement element, String input) {
 		element.clear();
@@ -56,13 +61,13 @@ public class TestSettings {
 	@BeforeClass
 	public static void setUpClass() {
 		// Windows
-		File chrome = new File("src/main/resources/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
-		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+//		File chrome = new File("src/main/resources/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", chrome.getAbsolutePath());
+//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
 		
 		// Mac
-//		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
-//		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
+		System.setProperty("webdriver.chrome.driver", "/Users/jtaylor/Downloads/chromedriver");
+		ChromeOptions options = new ChromeOptions().addArguments("user-data-dir=/Users/jtaylor/Library/Application Support/Google/Chrome/Default");
 		
 		driver = new ChromeDriver(options);
 		settingsPage = new SettingsPage(driver);
@@ -109,14 +114,14 @@ public class TestSettings {
 		assertEquals(headers.findElements(By.className("tick")).size(), Integer.parseInt(input));
 	}
 
-	@Test(priority = 2, enabled = false)
-	public void testDefaultBatchLocation() {
+	@Test(priority = 2, enabled = true, dataProvider = "DefaultBatchLocationProvider")
+	public void testDefaultBatchLocation(String location) {
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.defaultBatchLocationSelector)).click();
 
 		List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-option")));
 
 		for (WebElement option : options) {
-			if (option.getText().contains("Revature")) {
+			if (option.getText().contains(location)) {
 				option.click();
 				break;
 			}
@@ -126,7 +131,7 @@ public class TestSettings {
 		navBarPage.batchesTab.click();
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"view\"]/md-card/md-content[1]/form/div[4]/div/md-input-container[1]/md-select")));
 		
-		assertTrue(element.getText().contains("Revature"));
+		assertTrue(element.getText().contains(location));
 	}
 
 	//	@Test
@@ -168,18 +173,38 @@ public class TestSettings {
 		wait.until(ExpectedConditions.and(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
-
+		
 		String timeLineTrainersPerPageValue = settingsPage.timeLineTrainersPerPageInput.getAttribute("value");
+		String reportsOutgoingGradsValue = settingsPage.reportsOutgoingGradsInput.getAttribute("value");
+		String reportsCandidatesIncomingValue = settingsPage.reportsCandidatesIncomingInput.getAttribute("value");
 		String minimumBatchSizeValue = settingsPage.minBatchSizeInput.getAttribute("value");
+		String maximumBatchSizeValue = settingsPage.maxBatchSizeInput.getAttribute("value");
 		String defaultBatchLengthValue = settingsPage.defaultBatchLengthInput.getAttribute("value");
+		String minimumDayBetweenTrainerBatches = settingsPage.minDayBetweenTrainerBatchesInput.getAttribute("value");
 		String defaultBatchLocationValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[4]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
 		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]")).getText();
 
+		overwriteText(settingsPage.timeLineTrainersPerPageInput, "100000");
+		overwriteText(settingsPage.reportsOutgoingGradsInput, "100000");
+		overwriteText(settingsPage.reportsCandidatesIncomingInput, "100000");
+		overwriteText(settingsPage.minBatchSizeInput, "100000");
+		overwriteText(settingsPage.maxBatchSizeInput, "100000");
+		overwriteText(settingsPage.defaultBatchLengthInput, "100000");
+		overwriteText(settingsPage.minDayBetweenTrainerBatchesInput, "100000");
+		
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.resetButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		assertTrue(toast.getText().contains("Settings reset."));
 		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
 		wait.until(ExpectedConditions.invisibilityOf(toast));
+		
+		assertEquals(settingsPage.timeLineTrainersPerPageInput.getAttribute("value"), timeLineTrainersPerPageValue);
+		assertEquals(settingsPage.reportsOutgoingGradsInput.getAttribute("value"), reportsOutgoingGradsValue);
+		assertEquals(settingsPage.reportsCandidatesIncomingInput.getAttribute("value"), reportsCandidatesIncomingValue);
+		assertEquals(settingsPage.minBatchSizeInput.getAttribute("value"), minimumBatchSizeValue);
+		assertEquals(settingsPage.maxBatchSizeInput.getAttribute("value"), maximumBatchSizeValue);
+		assertEquals(settingsPage.defaultBatchLengthInput.getAttribute("value"), defaultBatchLengthValue);
+		assertEquals(settingsPage.minDayBetweenTrainerBatchesInput.getAttribute("value"), minimumDayBetweenTrainerBatches);
 	}
 
 	@Test(enabled = true)
@@ -188,14 +213,25 @@ public class TestSettings {
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
 
-		String timeLineTrainersPerPageValue = settingsPage.timeLineTrainersPerPageInput.getAttribute("value");
-		String minimumBatchSizeValue = settingsPage.minBatchSizeInput.getAttribute("value");
-		String defaultBatchLengthValue = settingsPage.defaultBatchLengthInput.getAttribute("value");
+		String timeLineTrainersPerPageValue = "2";
+		String reportsOutgoingGradsValue = "20";
+		String reportsCandidatesIncomingValue = "20";
+		String minimumBatchSizeValue = "20";
+		String maximumBatchSizeValue = "30";
+		String defaultBatchLengthValue = "10";
+		String minimumDayBetweenTrainerBatches = "7";
 		String defaultBatchLocationValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[4]/md-input-container/md-select/md-select-value/span[1]/div")).getText();
 		String defaultBatchBuildingValue = driver.findElement(By.xpath("//*[@id=\"view\"]/md-card/md-content/md-list/md-list-item[5]/md-input-container/md-select/md-select-value/span[1]")).getText();
 
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		overwriteText(settingsPage.timeLineTrainersPerPageInput, timeLineTrainersPerPageValue);
+		overwriteText(settingsPage.reportsOutgoingGradsInput, reportsOutgoingGradsValue);
+		overwriteText(settingsPage.reportsCandidatesIncomingInput, reportsCandidatesIncomingValue);
+		overwriteText(settingsPage.minBatchSizeInput, minimumBatchSizeValue);
+		overwriteText(settingsPage.maxBatchSizeInput, maximumBatchSizeValue);
+		overwriteText(settingsPage.defaultBatchLengthInput, defaultBatchLengthValue);
+		overwriteText(settingsPage.minDayBetweenTrainerBatchesInput, minimumDayBetweenTrainerBatches);
 		
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		assertTrue(toast.getText().contains("All settings have been updated"));
 		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
@@ -210,7 +246,41 @@ public class TestSettings {
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
 		
 		assertEquals(settingsPage.timeLineTrainersPerPageInput.getAttribute("value"), timeLineTrainersPerPageValue);
+		assertEquals(settingsPage.reportsOutgoingGradsInput.getAttribute("value"), reportsOutgoingGradsValue);
+		assertEquals(settingsPage.reportsCandidatesIncomingInput.getAttribute("value"), reportsCandidatesIncomingValue);
 		assertEquals(settingsPage.minBatchSizeInput.getAttribute("value"), minimumBatchSizeValue);
+		assertEquals(settingsPage.maxBatchSizeInput.getAttribute("value"), maximumBatchSizeValue);
 		assertEquals(settingsPage.defaultBatchLengthInput.getAttribute("value"), defaultBatchLengthValue);
+		assertEquals(settingsPage.minDayBetweenTrainerBatchesInput.getAttribute("value"), minimumDayBetweenTrainerBatches);
+	}
+	
+	@Test(enabled = false)
+	public void testSaveButtonInvalidValues() {
+		wait.until(ExpectedConditions.and(
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
+
+		String timeLineTrainersPerPageValue = "-1";
+		String reportsOutgoingGradsValue = "-1";
+		String reportsCandidatesIncomingValue = "-1";
+		String minimumBatchSizeValue = "-1";
+		String maximumBatchSizeValue = "-1";
+		String defaultBatchLengthValue = "-1";
+		String minimumDayBetweenTrainerBatches = "-1";
+
+		overwriteText(settingsPage.timeLineTrainersPerPageInput, timeLineTrainersPerPageValue);
+		overwriteText(settingsPage.reportsOutgoingGradsInput, reportsOutgoingGradsValue);
+		overwriteText(settingsPage.reportsCandidatesIncomingInput, reportsCandidatesIncomingValue);
+		overwriteText(settingsPage.minBatchSizeInput, minimumBatchSizeValue);
+		overwriteText(settingsPage.maxBatchSizeInput, maximumBatchSizeValue);
+		overwriteText(settingsPage.defaultBatchLengthInput, defaultBatchLengthValue);
+		overwriteText(settingsPage.minDayBetweenTrainerBatchesInput, minimumDayBetweenTrainerBatches);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
+		String text = toast.getText();
+		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
+		wait.until(ExpectedConditions.invisibilityOf(toast));
+		assertFalse(text.contains("All settings have been updated"));
 	}
 }
