@@ -1,0 +1,15 @@
+<div>
+  <ul class="nav nav-tabs" style="background-color:aliceblue">
+    <li role="presentation" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}"><a routerLink='/'>Home</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink='/test-ng'>TestNg</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink='/cucumber'>Cucumber</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink='/protractor'>Protractor</a></li>
+    <li role="presentation" routerLinkActive="active"><a routerLink='/karma'>Karma</a></li>
+  </ul>
+</div>
+<div>
+  <router-outlet>
+  </router-outlet>
+</div>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="2" tests="3" time="13.33">
+ <testsuite name="Testing profile tab" timestamp="2018-05-11T14:52:13" hostname="localhost" time="13.33" errors="0" tests="3" skipped="0" disabled="0" failures="2">
+  <testcase classname="Testing profile tab" name="should have a title" time="1.252" />
+  <testcase classname="Testing profile tab" name="login crediential" time="3.637">
+   <failure type="toEqual" message="Expected &apos;Login | Salesforce&apos; to equal &apos;AssignForce&apos;."><![CDATA[Error: Failed expectation
+    at UserContext.<anonymous> (C:\Users\Bala\Documents\GitHub\project1\src\app\bala\spec.js:24:36)
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing profile tab" name="profile tab" time="8.438">
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, /html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[6]/a)"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, /html/body/div/div[1]/ng-include/div/md-content/md-nav-bar/div/nav/ul/li[6]/a)
+    at elementArrayFinder.getWebElements.then (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as click] (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\Bala\Documents\GitHub\project1\src\app\bala\spec.js:30:108)
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("profile tab") in control flow
+    at UserContext.<anonymous> (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4264:13
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4172:9
+    at C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:64:48
+    at ControlFlow.emit (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\events.js:62:21)
+    at ControlFlow.shutdown_ (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2674:10)
+    at shutdownTask_.MicroTask (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\Bala\Documents\GitHub\project1\src\app\bala\spec.js:28:5)
+    at addSpecsToSuite (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\Bala\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\Bala\Documents\GitHub\project1\src\app\bala\spec.js:2:1)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>

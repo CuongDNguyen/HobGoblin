@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="12" tests="20" time="168.121">
+ <testsuite name="Testing assign force curricula tab trainer side" timestamp="2018-05-18T13:30:17" hostname="localhost" time="7.037" errors="0" tests="8" skipped="0" disabled="0" failures="0">
+  <testcase classname="Testing assign force curricula tab trainer side" name="should have a title" time="1.007" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="trainer login should work with correct user name and password" time="4.965" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="curricula tab should open up when clicked" time="0.169" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="Core curricula button should collapse properly" time="0.202" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="Core curricula button should expand properly" time="0.143" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="Focuses button should collapse properly" time="0.189" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="Focuses button should expand properly" time="0.159" />
+  <testcase classname="Testing assign force curricula tab trainer side" name="logout after checking curriculum functions should invalidate session" time="0.203" />
+ </testsuite>
+ <testsuite name="Testing assign force curricula tab VP side" timestamp="2018-05-18T13:30:24" hostname="localhost" time="94.587" errors="0" tests="7" skipped="0" disabled="0" failures="7">
+  <testcase classname="Testing assign force curricula tab VP side" name="should have a title" time="2.241" />
+  <testcase classname="Testing assign force curricula tab VP side" name="vp login should work with correct user name and password" time="1.164" />
+  <testcase classname="Testing assign force curricula tab VP side" name="curricula tab should open when clicked" time="0.806">
+   <failure type="toContain" message="Expected &apos;https://dev.assignforce.revaturelabs.com/home&apos; to contain &apos;https://dev.assignforce.revaturelabs.com/curriculum&apos;."><![CDATA[Error: Failed expectation
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:24:37)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force curricula tab VP side" name="Skills button should collapse properly" time="30.047">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)]]>
+   </failure>
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, //*[@id=&quot;view&quot;]/md-card/md-content/md-card[3]/md-toolbar/div/button)"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, //*[@id="view"]/md-card/md-content/md-card[3]/md-toolbar/div/button)
+    at elementArrayFinder.getWebElements.then (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:28:102)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("Skills button should collapse properly") in control flow
+    at UserContext.<anonymous> (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:27:3)
+    at addSpecsToSuite (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:1:63)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force curricula tab VP side" name="Skills button should expand properly" time="30.032">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)]]>
+   </failure>
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, //*[@id=&quot;view&quot;]/md-card/md-content/md-card[3]/md-toolbar/div/button)"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, //*[@id="view"]/md-card/md-content/md-card[3]/md-toolbar/div/button)
+    at elementArrayFinder.getWebElements.then (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:33:102)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("Skills button should expand properly") in control flow
+    at UserContext.<anonymous> (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:32:3)
+    at addSpecsToSuite (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:1:63)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force curricula tab VP side" name="fill out form and click create should add new skill" time="30.049">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)]]>
+   </failure>
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, //*[@id=&quot;input_1&quot;])"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, //*[@id="input_1"])
+    at elementArrayFinder.getWebElements.then (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as sendKeys] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as sendKeys] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:37:53)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("fill out form and click create should add new skill") in control flow
+    at UserContext.<anonymous> (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:36:3)
+    at addSpecsToSuite (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\curriculaTabVP.js:1:63)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force curricula tab VP side" name="logout after checking curriculum functions should invalidate session" time="0.244" />
+ </testsuite>
+ <testsuite name="Testing assign force trainer tab trainer side" timestamp="2018-05-18T13:31:59" hostname="localhost" time="66.497" errors="0" tests="5" skipped="0" disabled="0" failures="5">
+  <testcase classname="Testing assign force trainer tab trainer side" name="should have a title" time="0.446" />
+  <testcase classname="Testing assign force trainer tab trainer side" name="trainer login should work with correct user name and password" time="1.341" />
+  <testcase classname="Testing assign force trainer tab trainer side" name="trainer tab should open up when clicked" time="0.606">
+   <failure type="toContain" message="Expected &apos;https://dev.assignforce.revaturelabs.com/home&apos; to contain &apos;https://dev.assignforce.revaturelabs.com/trainers&apos;."><![CDATA[Error: Failed expectation
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:23:39)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2974:25)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force trainer tab trainer side" name="trainer pto calendar should open when clicked" time="30.054">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)]]>
+   </failure>
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, //*[@id=&quot;view&quot;]/md-card/md-toolbar[1]/div/button[2])"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, //*[@id="view"]/md-card/md-toolbar[1]/div/button[2])
+    at elementArrayFinder.getWebElements.then (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:26:90)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("trainer pto calendar should open when clicked") in control flow
+    at UserContext.<anonymous> (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:25:5)
+    at addSpecsToSuite (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:1:63)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Testing assign force trainer tab trainer side" name="trainer pto calendar new pto request added when filled out and submitted" time="34.05">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4281:23)
+    at ontimeout (timers.js:482:11)
+    at tryOnTimeout (timers.js:317:5)
+    at Timer.listOnTimeout (timers.js:277:5)]]>
+   </failure>
+   <failure type="exception" message="Failed: No element found using locator: By(xpath, //button[@ng-click=&quot;tCtrl.showPTODialog()&quot;])"><![CDATA[NoSuchElementError: No element found using locator: By(xpath, //button[@ng-click="tCtrl.showPTODialog()"])
+    at elementArrayFinder.getWebElements.then (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:814:27)
+    at ManagedPromise.invokeCallback_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1376:14)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+    at asyncRun (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2927:27)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:668:7
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)Error
+    at ElementArrayFinder.applyAction_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:459:27)
+    at ElementArrayFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
+    at ElementFinder.(anonymous function).args [as click] (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
+    at UserContext.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:30:82)
+    at C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
+    at new ManagedPromise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
+    at ControlFlow.promise (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
+    at schedulerExecute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:95:18)
+    at TaskQueue.execute_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3084:14)
+    at TaskQueue.executeNext_ (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:3067:27)
+From: Task: Run it("trainer pto calendar new pto request added when filled out and submitted") in control flow
+    at UserContext.<anonymous> (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:94:19)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at QueueRunner.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:909:35)
+    at Spec.execute (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:526:10)
+    at UserContext.fn (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:5340:37)
+    at attempt (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4297:26)
+    at QueueRunner.run (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4217:20)
+    at runNext (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:28:5)
+    at addSpecsToSuite (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
+    at Env.describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
+    at describe (C:\Users\azncd\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
+    at Object.<anonymous> (C:\Users\azncd\OneDrive\Desktop\AngularHG\trainerTabTrainer.js:1:63)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>
