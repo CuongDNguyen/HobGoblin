@@ -49,21 +49,21 @@ formatter.match({
   "location": "testOverviewTab.i_have_just_logged_in()"
 });
 formatter.result({
-  "duration": 4914989041,
+  "duration": 5440425383,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_have_landed_on_the_overview_tab()"
 });
 formatter.result({
-  "duration": 5012571198,
+  "duration": 5029732653,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_start_date()"
 });
 formatter.result({
-  "duration": 1852993938,
+  "duration": 7139450657,
   "status": "passed"
 });
 formatter.scenario({
@@ -93,21 +93,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_tab()"
 });
 formatter.result({
-  "duration": 5394884,
+  "duration": 9664575,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_clicked_on_start_date_column()"
 });
 formatter.result({
-  "duration": 93010401,
+  "duration": 154872972,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_start_date()"
 });
 formatter.result({
-  "duration": 1132620585,
+  "duration": 5950658030,
   "status": "passed"
 });
 formatter.scenario({
@@ -137,21 +137,21 @@ formatter.match({
   "location": "testOverviewTab.i_have_already_clicked_on_start_date_once()"
 });
 formatter.result({
-  "duration": 1037277487,
+  "duration": 5621428503,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_clicked_on_start_date_column()"
 });
 formatter.result({
-  "duration": 44656562,
+  "duration": 380644796,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_start_date()"
 });
 formatter.result({
-  "duration": 1082396585,
+  "duration": 5695511122,
   "status": "passed"
 });
 formatter.scenario({
@@ -181,21 +181,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 5499475,
+  "duration": 23802359,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_end_date_column()"
 });
 formatter.result({
-  "duration": 78614351,
+  "duration": 189756970,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_end_date()"
 });
 formatter.result({
-  "duration": 1831471794,
+  "duration": 10543140383,
   "status": "passed"
 });
 formatter.scenario({
@@ -225,21 +225,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 7077764,
+  "duration": 23066452,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_end_date_column_again()"
 });
 formatter.result({
-  "duration": 43667675,
+  "duration": 249758442,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_end_date()"
 });
 formatter.result({
-  "duration": 1084580894,
+  "duration": 6269295262,
   "status": "passed"
 });
 formatter.scenario({
@@ -269,21 +269,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 4962176,
+  "duration": 22814983,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_room_column()"
 });
 formatter.result({
-  "duration": 73151503,
+  "duration": 141769763,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_room()"
 });
 formatter.result({
-  "duration": 2120837400,
+  "duration": 11151301428,
   "status": "passed"
 });
 formatter.scenario({
@@ -313,21 +313,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 6916160,
+  "duration": 22184799,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_room_column_again()"
 });
 formatter.result({
-  "duration": 85515031,
+  "duration": 149324412,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_room()"
 });
 formatter.result({
-  "duration": 1538473476,
+  "duration": 6763609453,
   "status": "passed"
 });
 formatter.scenario({
@@ -357,21 +357,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 7783842,
+  "duration": 6983369,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_building_column()"
 });
 formatter.result({
-  "duration": 85155573,
+  "duration": 147944352,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_building()"
 });
 formatter.result({
-  "duration": 2455700442,
+  "duration": 10885385520,
   "error_message": "java.lang.AssertionError: Batches should be in ascending order according to building, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_ascending_order_according_to_building(testOverviewTab.java:260)\r\n\tat ✽.Then batches should be in ascending order according to building(src/test/resources/overview/overview_tab_batch_ordering.feature:48)\r\n",
   "status": "failed"
 });
@@ -402,21 +402,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 6050366,
+  "duration": 22103242,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_building_column_again()"
 });
 formatter.result({
-  "duration": 61932424,
+  "duration": 135037484,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_building()"
 });
 formatter.result({
-  "duration": 1833139571,
+  "duration": 5761755150,
   "error_message": "java.lang.AssertionError: Batches should be in descending order according to building, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_descending_order_according_to_building(testOverviewTab.java:271)\r\n\tat ✽.Then batches should be in descending order according to building(src/test/resources/overview/overview_tab_batch_ordering.feature:53)\r\n",
   "status": "failed"
 });
@@ -447,21 +447,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 8314722,
+  "duration": 26144119,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_location_column()"
 });
 formatter.result({
-  "duration": 97648989,
+  "duration": 154742707,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_location()"
 });
 formatter.result({
-  "duration": 2808749318,
+  "duration": 11010818842,
   "error_message": "java.lang.AssertionError: Batches should be in ascending order according to location, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_ascending_order_according_to_location(testOverviewTab.java:282)\r\n\tat ✽.Then batches should be in ascending order according to location(src/test/resources/overview/overview_tab_batch_ordering.feature:58)\r\n",
   "status": "failed"
 });
@@ -492,21 +492,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 7194060,
+  "duration": 7685294,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_location_column_again()"
 });
 formatter.result({
-  "duration": 65858139,
+  "duration": 139284898,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_location()"
 });
 formatter.result({
-  "duration": 1732338155,
+  "duration": 6519759028,
   "error_message": "java.lang.AssertionError: Batches should be in descending order according to location, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_descending_order_according_to_location(testOverviewTab.java:293)\r\n\tat ✽.Then batches should be in descending order according to location(src/test/resources/overview/overview_tab_batch_ordering.feature:63)\r\n",
   "status": "failed"
 });
@@ -537,21 +537,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 7271841,
+  "duration": 23189167,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_trainer_cotrainer_column()"
 });
 formatter.result({
-  "duration": 120977483,
+  "duration": 164481665,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_trainer_cotrainer()"
 });
 formatter.result({
-  "duration": 2870446887,
+  "duration": 10816353431,
   "error_message": "java.lang.AssertionError: Batches should be in ascending order according to trainer/cotrainer, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_ascending_order_according_to_trainer_cotrainer(testOverviewTab.java:304)\r\n\tat ✽.Then batches should be in ascending order according to trainer/cotrainer(src/test/resources/overview/overview_tab_batch_ordering.feature:68)\r\n",
   "status": "failed"
 });
@@ -582,21 +582,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 6950143,
+  "duration": 36182123,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_trainer_cotrainer_column_again()"
 });
 formatter.result({
-  "duration": 55408949,
+  "duration": 127176238,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_trainer_cotrainer()"
 });
 formatter.result({
-  "duration": 1647517119,
+  "duration": 6241497714,
   "error_message": "java.lang.AssertionError: Batches should be in descending order according to trainer/cotrainer, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_descending_order_according_to_trainer_cotrainer(testOverviewTab.java:315)\r\n\tat ✽.Then batches should be in descending order according to trainer/cotrainer(src/test/resources/overview/overview_tab_batch_ordering.feature:73)\r\n",
   "status": "failed"
 });
@@ -627,21 +627,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 8112338,
+  "duration": 8022096,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_curriculum_column()"
 });
 formatter.result({
-  "duration": 117226588,
+  "duration": 185914323,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_curriculum()"
 });
 formatter.result({
-  "duration": 2667645232,
+  "duration": 11102662894,
   "error_message": "java.lang.AssertionError: Batches should be in ascending order according to curriculum, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_ascending_order_according_to_curriculum(testOverviewTab.java:326)\r\n\tat ✽.Then batches should be in ascending order according to curriculum(src/test/resources/overview/overview_tab_batch_ordering.feature:78)\r\n",
   "status": "failed"
 });
@@ -672,21 +672,21 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 8314344,
+  "duration": 32255276,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_curriculum_column_again()"
 });
 formatter.result({
-  "duration": 87388590,
+  "duration": 118446554,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_curriculum()"
 });
 formatter.result({
-  "duration": 1677253548,
+  "duration": 7384194817,
   "error_message": "java.lang.AssertionError: Batches should be in descending order according to curriculum, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_descending_order_according_to_curriculum(testOverviewTab.java:337)\r\n\tat ✽.Then batches should be in descending order according to curriculum(src/test/resources/overview/overview_tab_batch_ordering.feature:83)\r\n",
   "status": "failed"
 });
@@ -717,22 +717,23 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 8589978,
+  "duration": 23045308,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_name_column()"
 });
 formatter.result({
-  "duration": 112811906,
+  "duration": 210079915,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_ascending_order_according_to_name()"
 });
 formatter.result({
-  "duration": 2786891881,
-  "status": "passed"
+  "duration": 10924711386,
+  "error_message": "java.lang.AssertionError: Batches should be in ascending order according to name, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_ascending_order_according_to_name(testOverviewTab.java:348)\r\n\tat ✽.Then batches should be in ascending order according to name(src/test/resources/overview/overview_tab_batch_ordering.feature:88)\r\n",
+  "status": "failed"
 });
 formatter.scenario({
   "line": 90,
@@ -761,21 +762,22 @@ formatter.match({
   "location": "testOverviewTab.i_am_on_the_overview_page()"
 });
 formatter.result({
-  "duration": 7491217,
+  "duration": 24650029,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.i_click_on_name_column_again()"
 });
 formatter.result({
-  "duration": 72203396,
+  "duration": 126745795,
   "status": "passed"
 });
 formatter.match({
   "location": "testOverviewTab.batches_should_be_in_descending_order_according_to_name()"
 });
 formatter.result({
-  "duration": 3866333891,
-  "status": "passed"
+  "duration": 7275135694,
+  "error_message": "java.lang.AssertionError: Batches should be in descending order according to name, but they aren\u0027t!\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat com.project2.overview.testOverviewTab.batches_should_be_in_descending_order_according_to_name(testOverviewTab.java:359)\r\n\tat ✽.Then batches should be in descending order according to name(src/test/resources/overview/overview_tab_batch_ordering.feature:93)\r\n",
+  "status": "failed"
 });
 });

@@ -49,21 +49,21 @@ formatter.match({
   "location": "TestBatchTimeline.i_have_logged_in()"
 });
 formatter.result({
-  "duration": 6123967928,
+  "duration": 4451060344,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.i_click_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 5197948599,
+  "duration": 5295301943,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 56068584,
+  "duration": 16843532,
   "status": "passed"
 });
 formatter.scenario({
@@ -88,14 +88,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 13954279,
+  "duration": 11030287,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_change_number_of_trainers_per_page()"
 });
 formatter.result({
-  "duration": 2070316621,
+  "duration": 7371629660,
   "status": "passed"
 });
 formatter.scenario({
@@ -130,14 +130,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 60140800,
+  "duration": 66191165,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_change_number_of_trainers_per_page()"
 });
 formatter.result({
-  "duration": 55778223,
+  "duration": 71468244,
   "status": "passed"
 });
 formatter.match({
@@ -150,7 +150,7 @@ formatter.match({
   "location": "TestBatchTimeline.i_set_the_number_of_trainers_per_page_to(String)"
 });
 formatter.result({
-  "duration": 307851240,
+  "duration": 412046737,
   "status": "passed"
 });
 formatter.match({
@@ -163,7 +163,7 @@ formatter.match({
   "location": "TestBatchTimeline.the_timeline_should_contain_trainers(String)"
 });
 formatter.result({
-  "duration": 10046459136,
+  "duration": 10051169842,
   "error_message": "java.lang.AssertionError: There should be 4 trainers in the timeline, but there aren\u0027t! expected [4] but found [0]\r\n\tat org.testng.Assert.fail(Assert.java:93)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:512)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:134)\r\n\tat org.testng.Assert.assertEquals(Assert.java:115)\r\n\tat org.testng.Assert.assertEquals(Assert.java:388)\r\n\tat com.project2.batchTimeline.TestBatchTimeline.the_timeline_should_contain_trainers(TestBatchTimeline.java:104)\r\n\tat ✽.Then The timeline should contain \"4\" trainers(src/test/resources/batch_timeline.feature:25)\r\n",
   "status": "failed"
 });
@@ -189,14 +189,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 13748497,
+  "duration": 19466591,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_filter_batches_by_start_date()"
 });
 formatter.result({
-  "duration": 44772101,
+  "duration": 33283807,
   "status": "passed"
 });
 formatter.scenario({
@@ -221,14 +221,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 15951685,
+  "duration": 14238976,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_filter_batches_by_end_date()"
 });
 formatter.result({
-  "duration": 42787533,
+  "duration": 35051267,
   "status": "passed"
 });
 formatter.scenario({
@@ -253,14 +253,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 6127770,
+  "duration": 8450651,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_filter_batches_by_curriculum()"
 });
 formatter.result({
-  "duration": 20313884,
+  "duration": 22660552,
   "status": "passed"
 });
 formatter.scenario({
@@ -285,14 +285,14 @@ formatter.match({
   "location": "TestBatchTimeline.i_am_on_the_batches_tab()"
 });
 formatter.result({
-  "duration": 6028843,
+  "duration": 9928883,
   "status": "passed"
 });
 formatter.match({
   "location": "TestBatchTimeline.there_is_an_option_to_filter_batches_by_focus()"
 });
 formatter.result({
-  "duration": 18349327,
+  "duration": 30823486,
   "status": "passed"
 });
 });
