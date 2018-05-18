@@ -52,7 +52,7 @@ public class TestSettings {
 	}
 	
 	private void clickSaveButton() {
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.saveButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
 		wait.until(ExpectedConditions.invisibilityOf(toast));
@@ -118,7 +118,7 @@ public class TestSettings {
 	public void testDefaultBatchLocation(String location) {
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.defaultBatchLocationSelector)).click();
 
-		List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-option")));
+		List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("/html/body/div[3]/md-select-menu/md-content/md-option")));
 
 		for (WebElement option : options) {
 			if (option.getText().contains(location)) {
@@ -139,8 +139,8 @@ public class TestSettings {
 		// Change the min batch size to 10, and click submit
 		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.minBatchSizeInput));
 		overwriteText(settingsPage.minBatchSizeInput, "10");
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton));
-		settingsPage.submitButton.click();
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.saveButton));
+		settingsPage.saveButton.click();
 
 		// Go to batches page, and check 
 		navBarPage.batchesTab.click();
@@ -208,7 +208,7 @@ public class TestSettings {
 	}
 
 	@Test(enabled = true)
-	public void testSubmitButton() {
+	public void testSaveButton() {
 		wait.until(ExpectedConditions.and(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("md-select"))));
@@ -231,13 +231,13 @@ public class TestSettings {
 		overwriteText(settingsPage.defaultBatchLengthInput, defaultBatchLengthValue);
 		overwriteText(settingsPage.minDayBetweenTrainerBatchesInput, minimumDayBetweenTrainerBatches);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.saveButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		assertTrue(toast.getText().contains("All settings have been updated"));
 		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();
 		wait.until(ExpectedConditions.invisibilityOf(toast));
 
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.saveButton)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(navBarPage.overviewTab)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(navBarPage.settingsTab)).click();
 
@@ -254,7 +254,7 @@ public class TestSettings {
 		assertEquals(settingsPage.minDayBetweenTrainerBatchesInput.getAttribute("value"), minimumDayBetweenTrainerBatches);
 	}
 	
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void testSaveButtonInvalidValues() {
 		wait.until(ExpectedConditions.and(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.tagName("input")),
@@ -276,7 +276,7 @@ public class TestSettings {
 		overwriteText(settingsPage.defaultBatchLengthInput, defaultBatchLengthValue);
 		overwriteText(settingsPage.minDayBetweenTrainerBatchesInput, minimumDayBetweenTrainerBatches);
 		
-		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.submitButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(settingsPage.saveButton)).click();
 		WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//md-toast")));
 		String text = toast.getText();
 		wait.until(ExpectedConditions.elementToBeClickable(toast.findElement(By.tagName("button")))).click();

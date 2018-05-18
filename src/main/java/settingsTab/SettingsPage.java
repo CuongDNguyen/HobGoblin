@@ -16,7 +16,7 @@ public class SettingsPage {
 	public WebElement timeLineTrainersPerPageInput;
 	
 	@FindBy(xpath = "//*[@id=\"view\"]/md-card/md-content/md-list/section/button[1]")
-	public WebElement submitButton;
+	public WebElement saveButton;
 	
 	@FindBy(xpath = "//*[@id=\"view\"]/md-card/md-content/md-list/section/button[2]")
 	public WebElement resetButton;
