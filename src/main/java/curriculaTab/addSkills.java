@@ -55,8 +55,9 @@ public class addSkills {
 		if (dr.getPageSource().contains("A new skill"))
 		{
 			Assert.assertFalse(false);
+		dr.quit();
 		}
 		else Assert.assertFalse(true);
-		dr.close();
+		dr.quit();
 	}
 }

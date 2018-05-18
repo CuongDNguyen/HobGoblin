@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">5</td><td class="num">64,185</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">settingsTab.TestSettings</td><td><a href="#m0">testDefaultBatchLength</a></td><td rowspan="2">1526664505815</td><td rowspan="2">4186</td></tr><tr class="failedeven"><td><a href="#m1">testDefaultBatchLength</a></td></tr><tr class="failedeven"><td><a href="#m2">testDefaultBatchLocation</a></td><td rowspan="2">1526664522206</td><td rowspan="2">10220</td></tr><tr class="failedeven"><td><a href="#m3">testDefaultBatchLocation</a></td></tr><tr class="failedeven"><td><a href="#m4">testSaveButtonInvalidValues</a></td><td rowspan="1">1526664486013</td><td rowspan="1">1748</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">settingsTab.TestSettings</td><td><a href="#m5">testClearButton</a></td><td rowspan="1">1526664478038</td><td rowspan="1">3669</td></tr><tr class="passedeven"><td><a href="#m6">testSaveButton</a></td><td rowspan="1">1526664481850</td><td rowspan="1">4057</td></tr><tr class="passedeven"><td><a href="#m7">testSettingsTab</a></td><td rowspan="1">1526664487861</td><td rowspan="1">20</td></tr><tr class="passedeven"><td><a href="#m8">testTimelineTrainersPerPage</a></td><td rowspan="2">1526664487993</td><td rowspan="2">4969</td></tr><tr class="passedeven"><td><a href="#m9">testTimelineTrainersPerPage</a></td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">settingsTab.TestSettings#testDefaultBatchLength</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>12</td><td>5/7/2018</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [12] but found [10]
+	at settingsTab.TestSettings.testDefaultBatchLength(TestSettings.java:168)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">settingsTab.TestSettings#testDefaultBatchLength</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>11</td><td>5/7/2018</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [11] but found [10]
+	at settingsTab.TestSettings.testDefaultBatchLength(TestSettings.java:168)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">settingsTab.TestSettings#testDefaultBatchLocation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Tampa</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: /html/body/div[3]/md-select-menu/md-content/md-option (tried for 10 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-AMM7699&apos;, ip: &apos;192.168.51.86&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\azncd\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
+Session ID: 00ed6eed63fba12e91a0702b284625f2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at settingsTab.TestSettings.testDefaultBatchLocation(TestSettings.java:121)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">settingsTab.TestSettings#testDefaultBatchLocation</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Revature</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: /html/body/div[3]/md-select-menu/md-content/md-option (tried for 10 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-AMM7699&apos;, ip: &apos;192.168.51.86&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\azncd\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 66.0.3359.181, webStorageEnabled: true}
+Session ID: 00ed6eed63fba12e91a0702b284625f2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at settingsTab.TestSettings.testDefaultBatchLocation(TestSettings.java:121)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">settingsTab.TestSettings#testSaveButtonInvalidValues</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [false] but found [true]
+	at settingsTab.TestSettings.testSaveButtonInvalidValues(TestSettings.java:284)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">settingsTab.TestSettings#testClearButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">settingsTab.TestSettings#testSaveButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">settingsTab.TestSettings#testSettingsTab</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">settingsTab.TestSettings#testTimelineTrainersPerPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">settingsTab.TestSettings#testTimelineTrainersPerPage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

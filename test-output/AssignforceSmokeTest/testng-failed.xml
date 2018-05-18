@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [AssignforceSmokeTest]">
+  <test thread-count="5" name="Quick Trainer Smoke(failed)">
+    <groups>
+      <run>
+        <include name="forgotPassword"/>
+        <include name="loginTrainer"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="loginTestNG.LoginTests">
+        <methods>
+          <include name="baseMethod"/>
+          <include name="openLocations"/>
+          <include name="exitTest"/>
+          <include name="openCurricula"/>
+        </methods>
+      </class> <!-- loginTestNG.LoginTests -->
+    </classes>
+  </test> <!-- Quick Trainer Smoke(failed) -->
+  <test thread-count="5" name="Quick VP Smoke(failed)">
+    <groups>
+      <run>
+        <include name="loginVP"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="loginTestNG.LoginTests">
+        <methods>
+          <include name="baseMethod"/>
+          <include name="exitTest"/>
+          <include name="openCurricula"/>
+        </methods>
+      </class> <!-- loginTestNG.LoginTests -->
+    </classes>
+  </test> <!-- Quick VP Smoke(failed) -->
+</suite> <!-- Failed suite [AssignforceSmokeTest] -->

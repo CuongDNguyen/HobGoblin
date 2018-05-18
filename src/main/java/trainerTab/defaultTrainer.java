@@ -55,11 +55,11 @@ public class defaultTrainer {
 		if (realTable1.contains("Trainers") & realTable2.contains("Inactive Trainers"))
 		{
 			Assert.assertFalse(false);
-			dr.close();
+			dr.quit();
 		}
 		else {
 			Assert.assertFalse(true);
-			dr.close();
+			dr.quit();
 		}
 	}
 }

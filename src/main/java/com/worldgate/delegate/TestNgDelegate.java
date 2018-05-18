@@ -13,7 +13,7 @@ public class TestNgDelegate {
 		TestNG runner = new TestNG();
 		List<String> suitefiles = new ArrayList<String>();
 		
-		suitefiles.add("C:\\revature\\ServletAngular\\src\\test\\java\\locationTests.xml");
+		suitefiles.add("C:\\revature\\TestCases\\src\\test\\java\\locationTests.xml");
 		
 		runner.setTestSuites(suitefiles);
 		runner.run();

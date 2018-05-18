@@ -51,13 +51,13 @@ public class invalidLoginTest {
 //		prop.load(input);
 		try {
 			TimeUnit.SECONDS.sleep(1);
-			String actualMessage = dr.findElement(By.xpath("//*[@id=\\\"error\\\"]")).getText();
+			String actualMessage = dr.findElement(By.xpath("//*[@id=\"error\"]")).getText();
 			if (actualMessage.contains("Please check your username and password. If you still can't log in, contact your Salesforce administrator.")) {
 				Assert.assertFalse(false);
 			} else {
 				Assert.assertFalse(true);
 			}
-			dr.close();
+			dr.quit();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

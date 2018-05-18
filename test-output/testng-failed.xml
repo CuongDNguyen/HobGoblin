@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="settingsTab.TestSettings">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="testDefaultBatchLocation" invocation-numbers="0 1"/>
+          <include name="setUp"/>
+          <include name="testDefaultBatchLength" invocation-numbers="0 1"/>
+          <include name="testSaveButtonInvalidValues"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- settingsTab.TestSettings -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

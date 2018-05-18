@@ -54,7 +54,7 @@ public class validLoginTest {
 			} else {
 				Assert.assertFalse(true);
 			}
-			dr.close();
+			dr.quit();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
